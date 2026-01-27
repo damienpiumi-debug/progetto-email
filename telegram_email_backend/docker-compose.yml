@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    env_file:
+      - app/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: telegram_mail
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"

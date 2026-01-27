@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+fastapi-mail
+python-telegram-bot==20.7
+sqlalchemy
+pymysql
+python-dotenv
